@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ============================================================
+     flink.energy — Article template (brand version)
+     The publisher agent fills every placeholder in double braces.
+     Repeatable blocks: follow the snippet patterns in the comments.
+     ============================================================ -->
+<title>Coalburn 1 online — flink.energy briefing, 17 August 2026</title>
+<meta name="description" content="Daily market intelligence on bankability and pre-FID developments across hydrogen, battery storage, solar and wind.">
+<meta name="theme-color" content="#00A99D">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FFFFFF; --mint:#EFF7F5;
+    --ink:#0B2725; --ink-soft:#4E6A66;
+    --teal:#00A99D; --teal-deep:#00776E; --teal-tint:#E2F2F0;
+    --volt:#F78F16; --volt-tint:#FDF0DE; --volt-deep:#B25E00;
+    --line:#D7E6E3;
+    --display:"Fraunces",Georgia,serif;
+    --body:"IBM Plex Sans",system-ui,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+  body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:var(--teal-deep);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;transition:color .15s ease}
+  a:hover{color:var(--ink)}
+  a:focus-visible{outline:3px solid var(--volt);outline-offset:3px;border-radius:2px}
+
+  .masthead{border-bottom:1px solid var(--line);background:var(--paper)}
+  .masthead-inner{max-width:1040px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .masthead-inner img{height:34px;width:auto;display:block}
+  .masthead-label{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+  .masthead-label .o{color:var(--volt)}
+
+  /* ---- FID ticker (signature element) ---- */
+  .ticker{border-bottom:1px solid var(--line);background:var(--ink);overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .ticker-inner{display:flex;white-space:nowrap;padding:10px 24px}
+  .ticker-tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;color:var(--volt);padding-right:20px;flex:none}
+  .tick{font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;color:#BFDBD6;padding-right:28px;flex:none}
+  .tick b{color:#FFFFFF;font-weight:500}
+  .tick .due{color:var(--volt)}
+
+  .article{max-width:720px;margin:0 auto;padding:52px 24px 40px}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal-deep);margin-bottom:18px}
+  .kicker::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--volt);margin-right:9px;vertical-align:1px}
+  h1{font-family:var(--display);font-weight:600;font-size:clamp(30px,5.4vw,44px);line-height:1.12;letter-spacing:-.015em;margin-bottom:22px}
+  .meta{font-family:var(--mono);font-size:12.5px;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:6px 18px;padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:26px}
+  .lede{font-size:19.5px;line-height:1.6;margin-bottom:14px}
+  .lede-note{font-size:14px;color:var(--ink-soft)}
+
+  section{margin-top:44px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal-deep);margin-bottom:8px}
+  .eyebrow::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--teal);margin-right:9px}
+  h2{font-family:var(--display);font-weight:600;font-size:26px;line-height:1.25;letter-spacing:-.01em;margin-bottom:14px}
+  section p{margin-bottom:14px}
+  section p:last-child{margin-bottom:0}
+  .pubs{list-style:none;margin-top:6px}
+  .pubs li{padding:14px 0 14px 18px;border-left:3px solid var(--teal-tint);margin-bottom:10px}
+  .pubs li:hover{border-left-color:var(--teal)}
+  .pub-source{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:3px}
+  .pubs a{font-weight:600;text-decoration:none}
+  .pubs a:hover{text-decoration:underline}
+  .pubs p{font-size:15.5px;margin:4px 0 0}
+  .watch{background:var(--volt-tint);border:1px solid #F2D6AC;border-radius:10px;padding:22px 24px;margin-top:14px}
+  .watch dl{display:grid;grid-template-columns:max-content 1fr;gap:10px 18px}
+  .watch dt{font-family:var(--mono);font-size:12.5px;font-weight:500;letter-spacing:.06em;color:var(--volt-deep);white-space:nowrap;padding-top:2px}
+  .watch dd{font-size:15.5px}
+  @media (max-width:560px){.watch dl{grid-template-columns:1fr;gap:2px}.watch dd{margin-bottom:10px}}
+
+  .article-footer{max-width:720px;margin:0 auto;padding:0 24px 72px}
+  .backlink{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;display:inline-block;margin-bottom:18px}
+  .method{border-top:1px solid var(--line);padding-top:22px;font-size:13.5px;line-height:1.6;color:var(--ink-soft)}
+  .method strong{color:var(--ink);font-weight:600}
+  .colophon{margin-top:18px;font-family:var(--mono);font-size:12px;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:6px 18px}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a href="index.html" aria-label="flink.energy home"><img src="logo.png" alt="Flink Energy"></a>
+    <span class="masthead-label">Daily briefing <span class="o">·</span> Bankability &amp; pre-FID</span>
+  </div>
+</header>
+
+<div class="ticker" aria-label="Tracked pre-FID milestones">
+  <div class="ticker-inner">
+    <span class="ticker-tag">FID watch ▸</span>
+    <span class="tick"><b>Norfolk Vanguard E+W</b> · UK · 3.1 GW wind · <span class="due">FID due summer '26</span></span>
+    <span class="tick"><b>Meranti Green Steel</b> · Oman · 2.5 Mtpa green HBI · <span class="due">FID due mid-'26</span></span>
+    <span class="tick"><b>Gennaker</b> · DE · 976.5 MW wind · <span class="due">FID due summer '26</span></span>
+    <span class="tick"><b>EHB auction 3 winners</b> · EU · 1.1 GW electrolysis · <span class="due">grants Q4 '26</span></span>
+    <span class="tick"><b>Berwick Bank B</b> · UK · 1.38 GW wind · <span class="due">FID 2027</span></span>
+  </div>
+</div>
+
+<main>
+  <article class="article">
+    <p class="kicker">Market intelligence · Renewables finance</p>
+
+    <h1>Europe&rsquo;s largest battery goes live as capital keeps rewarding contracted, de-risked assets</h1>
+
+    <div class="meta">
+      <span>Edition #002</span>
+      <span>17 August 2026</span>
+      <span>Past week</span>
+      <span>≈ 5 min read</span>
+    </div>
+
+    <p class="lede">The through-line across the past week is that money is moving toward assets that have already retired risk. Copenhagen Infrastructure Partners energised Europe&rsquo;s largest operational battery in Scotland &mdash; contracted, capacity-market-backed and half sold to an insurer before commissioning. In Taiwan, a syndicate of 35 institutions repriced an offshore wind project already under construction rather than underwriting a new one. In hydrogen, the EU&rsquo;s third auction winners now face a hard 2.5-year clock to financial close. And Germany is arguing over whether a CfD regime should become the default route to bankability for its offshore pipeline.</p>    <section>
+      <p class="eyebrow">Storage / BESS</p>
+      <h2>Coalburn 1 sets the template: contracted, insured, partly sold before COD</h2>
+      <p>CIP has taken its 500&nbsp;MW two-hour Coalburn 1 system in South Lanarkshire into <a href="https://www.energy-storage.news/copenhagen-infrastructure-partners-commercial-operations-500mw-bess-scotland/">commercial operation</a>, making it the largest operational BESS in Europe. The bankability lesson sits in the structure rather than the megawatts: the asset carries a 15-year capacity market contract, a ten-year optimisation agreement with SSE Energy Markets covering all three of CIP&rsquo;s Scottish projects, and a long-term service wrap from Canadian Solar&rsquo;s e-STORAGE unit alongside the 1,170&nbsp;MWh of SolBank supply. CIP also divested half the equity to AXA IM Alts ahead of commissioning &mdash; the insurer&rsquo;s first move into UK storage, and a clean illustration of how operational proof converts into an exit.</p>
+      <p>The sister assets are already funded: Coalburn 2 and the Devilla project near Fife each passed investment decision in January and are due to start construction in 2027, taking the cluster to 1.5&nbsp;GW and 3&nbsp;GWh. Read alongside July&rsquo;s <a href="https://www.indexbox.io/blog/uk-battery-storage-activity-surges-in-july-2026/">financial close on Fidra&rsquo;s 500&nbsp;MW West Burton C</a>, backed by £231&nbsp;million of loan facilities plus National Wealth Fund equity, the UK debt market for storage now looks less like project-by-project underwriting and more like platform lending.</p>
+    </section>
+
+    <section>
+      <p class="eyebrow">Wind</p>
+      <h2>Lenders reprice construction risk in Taiwan; Berlin debates the CfD backstop</h2>
+      <p>The Hai Long project off Changhua County has closed an <a href="https://constructionreviewonline.com/hai-long-offshore-wind-farm-secures-nt55bn-us1-7bn-financing-package-to-drive-2026-completion/">incremental NT$55&nbsp;billion (about US$1.7&nbsp;billion) package</a> inside its existing financing framework, drawing in the National Credit Guarantee Administration and 17 further institutions alongside the original seven export credit agencies. Nothing about the project changed except its risk profile: with grid connection targeted for end-2026, the sponsors converted construction progress directly into cheaper capital. That is the same mechanism visible at Coalburn, in a different currency.</p>
+      <p>Policy is the swing factor in Germany, where the government has <a href="https://www.offshorewind.biz/">proposed changes to the Offshore Wind Act</a> and industry is pushing back on treating a CfD mechanism as a mere fallback &mdash; a live argument about whether revenue certainty becomes the default basis for financing the next auction round. In the US the direction is the opposite: a federal judge has allowed the Bureau of Ocean Energy Management to <a href="https://www.renews.biz/offshore-wind/">reconsider construction permits for EDF&rsquo;s Atlantic Shores project</a>, keeping permit reversal on the risk register for anything not yet built. Meanwhile RWE&rsquo;s 3.1&nbsp;GW Norfolk Vanguard pair remains the one to watch, with <a href="https://www.offshorewind.biz/2026/01/14/global-investor-joining-rwe-on-two-norfolk-vanguard-offshore-wind-projects-fid-expected-in-summer/">non-recourse debt, the KKR partnership close and FID all targeted for this summer</a>.</p>
+    </section>
+
+    <section>
+      <p class="eyebrow">Hydrogen</p>
+      <h2>The EU auction winners now have a clock, not just a grant</h2>
+      <p>The financing discipline story in hydrogen is procedural. Under the third European Hydrogen Bank auction, <a href="https://hydrogeneurope.eu/high-levels-of-competition-in-3rd-eu-hydrogen-bank-auction/">nine projects took €1.09&nbsp;billion across three baskets</a> at bids ranging from €0.57 to €3.49 per kilogram, together representing close to 1.1&nbsp;GW of electrolysis. Grant agreements are expected to be signed in the fourth quarter, and the terms are what matter for lenders: financial close is required within 2.5 years of signature and operation within five. That converts a subsidy award into a dated bankability test, and it is the sharpest instrument yet against the pipeline problem <a href="https://think.ing.com/articles/energy-hydrogen-stuck-in-the-pilot-phase/">ING framed earlier this year</a>, counting roughly 1,700 announced projects globally against a thin record of sanctions.</p>
+      <p>On the demand side, Meranti Green Steel&rsquo;s 2.5&nbsp;Mtpa green iron plant in Duqm is the nearest large test: the sponsor has <a href="https://solarquarter.com/2026/02/02/meranti-green-steel-secures-full-offtake-for-2-5-mtpa-green-hydrogen-based-hbi-project-in-oman-strengthening-global-low-carbon-steel-supply/">contracted its full offtake</a> and holds a conditional gas allocation, with FID targeted for mid-2026 and a start on natural gas blended with green hydrogen before ramping the hydrogen share.</p>
+    </section>
+
+    <section>
+      <p class="eyebrow">Solar PV</p>
+      <h2>Scale financing in Italy; Singapore turns imports into offtake</h2>
+      <p>European Energy has <a href="https://energywatch.com/EnergyNews/sun/article19539276.ece">secured €234&nbsp;million for an Italian solar project</a>, the developer framing the close as evidence that its assets arrive investment-ready rather than needing to be de-risked by the lender. In Southeast Asia the bankability driver is cross-border demand: Singapore&rsquo;s Energy Market Authority has <a href="https://natlawreview.com/press-releases/malaysia-solar-energy-market-expected-reach-myr-504b-2026-lss6-accelerates">conditionally approved two projects to import a combined 900&nbsp;MW</a> from solar and battery assets in Johor, effectively creating an investment-grade offtake route for Malaysian capacity that would otherwise depend on domestic tariffs.</p>
+    </section>
+
+    <section>
+      <p class="eyebrow">New publications</p>
+      <h2>White papers &amp; research</h2>
+      <ul class="pubs">
+        <li>
+          <span class="pub-source">Market data · Modo Energy · European BESS financing</span>
+          <a href="https://ratedpower.com/blog/how-saturated-is-the-uk-bess-market/">82 European storage financings tracked in 2025, up from 25</a>
+          <p>Disclosed debt rose from €1.4bn to €6.1bn year on year &mdash; the clearest single measure of how fast storage lending has deepened.</p>
+        </li>
+        <li>
+          <span class="pub-source">Report · Mercom Capital Group · 1H 2026</span>
+          <a href="https://www.mercomindia.com/daily-news-wrap-up-energy-storage-funding-drops-2-yoy-in-1h-2026">Storage corporate funding: $8.9bn across 73 deals</a>
+          <p>Dollars down 2% year on year but deal count up 33% &mdash; smaller cheques, more transactions, consistent with selective capital.</p>
+        </li>
+        <li>
+          <span class="pub-source">Legal analysis · Morgan Lewis · 2026 Energy Storage Report</span>
+          <a href="https://www.morganlewis.com/pubs/2026/03/project-financing-trends-for-global-energy-storage-projects-in-2026-and-beyond">Project financing trends for global storage</a>
+          <p>Portfolio financings are gaining ground as a risk-mitigation tool; newer long-duration chemistries still price as higher risk for lack of operating history.</p>
+        </li>
+        <li>
+          <span class="pub-source">Report · Orrick · Global Offshore Wind 2026</span>
+          <a href="https://www.orrick.com/en/Insights/2026/02/Orricks-Global-Offshore-Wind-Report-2026-Edition">Jurisdiction-by-jurisdiction view on routes to financial close</a>
+          <p>Tracks where auction design and permitting actually convert pipeline into sanctioned projects across Europe, Asia and the Americas.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <p class="eyebrow">Watch list</p>
+      <h2>What we are tracking</h2>
+      <div class="watch">
+        <dl>
+          <dt>Summer 2026</dt>
+          <dd>RWE / KKR Norfolk Vanguard East and West (3.1&nbsp;GW) &mdash; FID, non-recourse financing and partnership close all targeted together.</dd>
+          <dt>Mid-2026</dt>
+          <dd>Meranti Green Steel (2.5&nbsp;Mtpa, Duqm) &mdash; FID on the largest near-term hydrogen-linked iron project, offtake already contracted.</dd>
+          <dt>Q4 2026</dt>
+          <dd>European Hydrogen Bank auction-three grant agreements signed &mdash; starts the 2.5-year financial-close clock for 1.1&nbsp;GW of electrolysis.</dd>
+          <dt>2026&ndash;27</dt>
+          <dd>German Offshore Wind Act amendments &mdash; whether CfDs become the default revenue basis or stay a fallback.</dd>
+          <dt>2027</dt>
+          <dd>Coalburn 2 and Devilla construction start; SSE&rsquo;s Berwick Bank B (1.38&nbsp;GW) FID.</dd>
+        </dl>
+      </div>
+    </section>
+  </article>
+
+  <footer class="article-footer">
+    <a class="backlink" href="index.html">← All editions</a>
+    <div class="method">
+      <p><strong>About this briefing.</strong> Produced by an automated editorial pipeline — collection, curation, summarisation and a quality gate — screening news, white papers and research for bankability and pre-FID signals across hydrogen, battery storage, solar and wind. Sources are linked in place. Nothing here constitutes investment advice.</p>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Flink Energy · Making Renewables Bankable</span>
+      <span>Edition #002</span>
+      <span>Contact: briefing@flink.energy</span>
+    </div>
+  </footer>
+</main>
+
+</body>
+</html>
