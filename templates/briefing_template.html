@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ============================================================
+     flink.energy — Article template (brand version)
+     The publisher agent fills every placeholder in double braces.
+     Repeatable blocks: follow the snippet patterns in the comments.
+     ============================================================ -->
+<title>{{HEADLINE_SHORT}} — flink.energy briefing, {{DATE_HUMAN}}</title>
+<meta name="description" content="Daily market intelligence on bankability and pre-FID developments across hydrogen, battery storage, solar and wind.">
+<meta name="theme-color" content="#00A99D">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FFFFFF; --mint:#EFF7F5;
+    --ink:#0B2725; --ink-soft:#4E6A66;
+    --teal:#00A99D; --teal-deep:#00776E; --teal-tint:#E2F2F0;
+    --volt:#F78F16; --volt-tint:#FDF0DE; --volt-deep:#B25E00;
+    --line:#D7E6E3;
+    --display:"Fraunces",Georgia,serif;
+    --body:"IBM Plex Sans",system-ui,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+  body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:var(--teal-deep);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;transition:color .15s ease}
+  a:hover{color:var(--ink)}
+  a:focus-visible{outline:3px solid var(--volt);outline-offset:3px;border-radius:2px}
+
+  .masthead{border-bottom:1px solid var(--line);background:var(--paper)}
+  .masthead-inner{max-width:1040px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .masthead-inner img{height:34px;width:auto;display:block}
+  .masthead-label{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+  .masthead-label .o{color:var(--volt)}
+
+  /* ---- FID ticker (signature element) ---- */
+  /* {{TICKER_ITEMS}} pattern, one per tracked milestone:
+     <span class="tick"><b>NAME</b> · REGION · SIZE · <span class="due">FID due WHEN</span></span> */
+  .ticker{border-bottom:1px solid var(--line);background:var(--ink);overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .ticker-inner{display:flex;white-space:nowrap;padding:10px 24px}
+  .ticker-tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;color:var(--volt);padding-right:20px;flex:none}
+  .tick{font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;color:#BFDBD6;padding-right:28px;flex:none}
+  .tick b{color:#FFFFFF;font-weight:500}
+  .tick .due{color:var(--volt)}
+
+  .article{max-width:720px;margin:0 auto;padding:52px 24px 40px}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal-deep);margin-bottom:18px}
+  .kicker::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--volt);margin-right:9px;vertical-align:1px}
+  h1{font-family:var(--display);font-weight:600;font-size:clamp(30px,5.4vw,44px);line-height:1.12;letter-spacing:-.015em;margin-bottom:22px}
+  .meta{font-family:var(--mono);font-size:12.5px;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:6px 18px;padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:26px}
+  .lede{font-size:19.5px;line-height:1.6;margin-bottom:14px}
+  .lede-note{font-size:14px;color:var(--ink-soft)}
+
+  section{margin-top:44px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal-deep);margin-bottom:8px}
+  .eyebrow::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--teal);margin-right:9px}
+  h2{font-family:var(--display);font-weight:600;font-size:26px;line-height:1.25;letter-spacing:-.01em;margin-bottom:14px}
+  section p{margin-bottom:14px}
+  section p:last-child{margin-bottom:0}
+
+  /* {{PUBLICATIONS}} pattern, one <li> per publication:
+     <li><span class="pub-source">TYPE · PUBLISHER · DATE</span><a href="URL">TITLE</a><p>ONE-LINE TAKEAWAY</p></li> */
+  .pubs{list-style:none;margin-top:6px}
+  .pubs li{padding:14px 0 14px 18px;border-left:3px solid var(--teal-tint);margin-bottom:10px}
+  .pubs li:hover{border-left-color:var(--teal)}
+  .pub-source{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:3px}
+  .pubs a{font-weight:600;text-decoration:none}
+  .pubs a:hover{text-decoration:underline}
+  .pubs p{font-size:15.5px;margin:4px 0 0}
+
+  /* {{WATCHLIST}} pattern, one pair per item:
+     <dt>WHEN</dt><dd>WHAT TO WATCH</dd> */
+  .watch{background:var(--volt-tint);border:1px solid #F2D6AC;border-radius:10px;padding:22px 24px;margin-top:14px}
+  .watch dl{display:grid;grid-template-columns:max-content 1fr;gap:10px 18px}
+  .watch dt{font-family:var(--mono);font-size:12.5px;font-weight:500;letter-spacing:.06em;color:var(--volt-deep);white-space:nowrap;padding-top:2px}
+  .watch dd{font-size:15.5px}
+  @media (max-width:560px){.watch dl{grid-template-columns:1fr;gap:2px}.watch dd{margin-bottom:10px}}
+
+  .article-footer{max-width:720px;margin:0 auto;padding:0 24px 72px}
+  .backlink{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;display:inline-block;margin-bottom:18px}
+  .method{border-top:1px solid var(--line);padding-top:22px;font-size:13.5px;line-height:1.6;color:var(--ink-soft)}
+  .method strong{color:var(--ink);font-weight:600}
+  .colophon{margin-top:18px;font-family:var(--mono);font-size:12px;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:6px 18px}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a href="index.html" aria-label="flink.energy home"><img src="logo.png" alt="Flink Energy"></a>
+    <span class="masthead-label">Daily briefing <span class="o">·</span> Bankability &amp; pre-FID</span>
+  </div>
+</header>
+
+<div class="ticker" aria-label="Tracked pre-FID milestones">
+  <div class="ticker-inner">
+    <span class="ticker-tag">FID watch ▸</span>
+    {{TICKER_ITEMS}}
+  </div>
+</div>
+
+<main>
+  <article class="article">
+    <p class="kicker">Market intelligence · Renewables finance</p>
+
+    <h1>{{HEADLINE}}</h1>
+
+    <div class="meta">
+      <span>Edition #{{EDITION_NUMBER}}</span>
+      <span>{{DATE_HUMAN}}</span>
+      <span>{{SCOPE_LABEL}}</span>
+      <span>≈ {{READ_TIME}} min read</span>
+    </div>
+
+    <p class="lede">{{LEDE}}</p>
+    {{LEDE_NOTE}}
+
+    <!-- {{SECTIONS}} pattern, one <section> per technology (H2 / BESS / Wind / Solar / Capital):
+    <section>
+      <p class="eyebrow">TECHNOLOGY</p>
+      <h2>SECTION HEADLINE</h2>
+      <p>PARAGRAPH WITH <a href="URL">SOURCE-LINKED</a> CLAIMS.</p>
+    </section>
+    -->
+    {{SECTIONS}}
+
+    <section>
+      <p class="eyebrow">New publications</p>
+      <h2>White papers &amp; research</h2>
+      <ul class="pubs">
+        {{PUBLICATIONS}}
+      </ul>
+    </section>
+
+    <section>
+      <p class="eyebrow">Watch list</p>
+      <h2>What we are tracking</h2>
+      <div class="watch">
+        <dl>
+          {{WATCHLIST}}
+        </dl>
+      </div>
+    </section>
+  </article>
+
+  <footer class="article-footer">
+    <a class="backlink" href="index.html">← All editions</a>
+    <div class="method">
+      <p><strong>About this briefing.</strong> Produced by an automated editorial pipeline — collection, curation, summarisation and a quality gate — screening news, white papers and research for bankability and pre-FID signals across hydrogen, battery storage, solar and wind. Sources are linked in place. Nothing here constitutes investment advice.</p>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Flink Energy · Making Renewables Bankable</span>
+      <span>Edition #{{EDITION_NUMBER}}</span>
+      <span>Contact: briefing@flink.energy</span>
+    </div>
+  </footer>
+</main>
+
+</body>
+</html>
