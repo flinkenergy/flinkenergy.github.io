@@ -41,7 +41,7 @@
   .masthead-label .o{color:var(--volt)}
 
   /* ---- FID ticker (signature element) ---- */
-  /* {{TICKER_ITEMS}} pattern, one per tracked milestone:
+  /* TICKER_ITEMS pattern, one per tracked milestone:
      <span class="tick"><b>NAME</b> · REGION · SIZE · <span class="due">FID due WHEN</span></span> */
   .ticker{border-bottom:1px solid var(--line);background:var(--ink);overflow-x:auto;-webkit-overflow-scrolling:touch}
   .ticker-inner{display:flex;white-space:nowrap;padding:10px 24px}
@@ -65,7 +65,7 @@
   section p{margin-bottom:14px}
   section p:last-child{margin-bottom:0}
 
-  /* {{PUBLICATIONS}} pattern, one <li> per publication:
+  /* PUBLICATIONS pattern, one <li> per publication:
      <li><span class="pub-source">TYPE · PUBLISHER · DATE</span><a href="URL">TITLE</a><p>ONE-LINE TAKEAWAY</p></li> */
   .pubs{list-style:none;margin-top:6px}
   .pubs li{padding:14px 0 14px 18px;border-left:3px solid var(--teal-tint);margin-bottom:10px}
@@ -75,7 +75,7 @@
   .pubs a:hover{text-decoration:underline}
   .pubs p{font-size:15.5px;margin:4px 0 0}
 
-  /* {{WATCHLIST}} pattern, one pair per item:
+  /* WATCHLIST pattern, one pair per item:
      <dt>WHEN</dt><dd>WHAT TO WATCH</dd> */
   .watch{background:var(--volt-tint);border:1px solid #F2D6AC;border-radius:10px;padding:22px 24px;margin-top:14px}
   .watch dl{display:grid;grid-template-columns:max-content 1fr;gap:10px 18px}
@@ -122,7 +122,7 @@
     <p class="lede">{{LEDE}}</p>
     {{LEDE_NOTE}}
 
-    <!-- {{SECTIONS}} pattern, one <section> per technology (H2 / BESS / Wind / Solar / Capital):
+    <!-- SECTIONS pattern, one <section> per technology (H2 / BESS / Wind / Solar / Capital):
     <section>
       <p class="eyebrow">TECHNOLOGY</p>
       <h2>SECTION HEADLINE</h2>
