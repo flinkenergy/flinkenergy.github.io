@@ -3,148 +3,147 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- ============================================================
-     flink.energy — Article template (brand version)
-     The publisher agent fills every placeholder in double braces.
-     Repeatable blocks: follow the snippet patterns in the comments.
-     ============================================================ -->
-<title>De-risking by design — flink.energy briefing, 18 August 2026</title>
-<meta name="description" content="Daily market intelligence on bankability and pre-FID developments across hydrogen, battery storage, solar and wind.">
-<meta name="theme-color" content="#00A99D">
-<link rel="icon" type="image/png" href="favicon.png">
+<title>Lenders fund the contracted floor, equity carries the merchant tail — flink.energy daily briefing, 18 August 2026</title>
+<meta name="description" content="Senior debt follows contracted revenue: the EIB's EUR 450m at OMV Schwechat, a EUR 229m six-lender package for Romania's Parau 2, and a 44 MW EEG-backed German close.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,450;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#FFFFFF; --mint:#EFF7F5;
-    --ink:#0B2725; --ink-soft:#4E6A66;
-    --teal:#00A99D; --teal-deep:#00776E; --teal-tint:#E2F2F0;
-    --volt:#F78F16; --volt-tint:#FDF0DE; --volt-deep:#B25E00;
-    --line:#D7E6E3;
+    --paper:#F6F9F6; --ink:#122A1F; --ink-soft:#50655A;
+    --current:#0E7A5F; --current-tint:#E3F0EA;
+    --volt:#DE9A26; --volt-tint:#FBF1DC;
+    --line:#D9E4DD;
     --display:"Fraunces",Georgia,serif;
     --body:"IBM Plex Sans",system-ui,sans-serif;
     --mono:"IBM Plex Mono",ui-monospace,monospace;
   }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
-  body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
-  a{color:var(--teal-deep);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;transition:color .15s ease}
-  a:hover{color:var(--ink)}
-  a:focus-visible{outline:3px solid var(--volt);outline-offset:3px;border-radius:2px}
-
-  .masthead{border-bottom:1px solid var(--line);background:var(--paper)}
-  .masthead-inner{max-width:1040px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-  .masthead-inner img{height:34px;width:auto;display:block}
-  .masthead-label{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
-  .masthead-label .o{color:var(--volt)}
-
-  /* ---- FID ticker (signature element) ---- */
-  .ticker{border-bottom:1px solid var(--line);background:var(--ink);overflow-x:auto;-webkit-overflow-scrolling:touch}
-  .ticker-inner{display:flex;white-space:nowrap;padding:10px 24px}
-  .ticker-tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;color:var(--volt);padding-right:20px;flex:none}
-  .tick{font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;color:#BFDBD6;padding-right:28px;flex:none}
-  .tick b{color:#FFFFFF;font-weight:500}
-  .tick .due{color:var(--volt)}
-
-  .article{max-width:720px;margin:0 auto;padding:52px 24px 40px}
-  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal-deep);margin-bottom:18px}
-  .kicker::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--volt);margin-right:9px;vertical-align:1px}
-  h1{font-family:var(--display);font-weight:600;font-size:clamp(30px,5.4vw,44px);line-height:1.12;letter-spacing:-.015em;margin-bottom:22px}
-  .meta{font-family:var(--mono);font-size:12.5px;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:6px 18px;padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:26px}
-  .lede{font-size:19.5px;line-height:1.6;margin-bottom:14px}
-  .lede-note{font-size:14px;color:var(--ink-soft)}
-
-  section{margin-top:44px}
-  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal-deep);margin-bottom:8px}
-  .eyebrow::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--teal);margin-right:9px}
-  h2{font-family:var(--display);font-weight:600;font-size:26px;line-height:1.25;letter-spacing:-.01em;margin-bottom:14px}
-  section p{margin-bottom:14px}
-  section p:last-child{margin-bottom:0}
-  .pubs{list-style:none;margin-top:6px}
-  .pubs li{padding:14px 0 14px 18px;border-left:3px solid var(--teal-tint);margin-bottom:10px}
-  .pubs li:hover{border-left-color:var(--teal)}
-  .pub-source{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:3px}
-  .pubs a{font-weight:600;text-decoration:none}
-  .pubs a:hover{text-decoration:underline}
-  .pubs p{font-size:15.5px;margin:4px 0 0}
-  .watch{background:var(--volt-tint);border:1px solid #F2D6AC;border-radius:10px;padding:22px 24px;margin-top:14px}
-  .watch dl{display:grid;grid-template-columns:max-content 1fr;gap:10px 18px}
-  .watch dt{font-family:var(--mono);font-size:12.5px;font-weight:500;letter-spacing:.06em;color:var(--volt-deep);white-space:nowrap;padding-top:2px}
-  .watch dd{font-size:15.5px}
-  @media (max-width:560px){.watch dl{grid-template-columns:1fr;gap:2px}.watch dd{margin-bottom:10px}}
-
-  .article-footer{max-width:720px;margin:0 auto;padding:0 24px 72px}
-  .backlink{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;display:inline-block;margin-bottom:18px}
-  .method{border-top:1px solid var(--line);padding-top:22px;font-size:13.5px;line-height:1.6;color:var(--ink-soft)}
-  .method strong{color:var(--ink);font-weight:600}
-  .colophon{margin-top:18px;font-family:var(--mono);font-size:12px;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:6px 18px}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition:none !important;}}
+  body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  a{color:var(--current);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;transition:color .15s ease;}
+  a:hover{color:var(--ink);}
+  a:focus-visible{outline:2px solid var(--current);outline-offset:3px;border-radius:2px;}
+  .masthead{border-bottom:1px solid var(--line);background:var(--paper);}
+  .masthead-inner{max-width:1040px;margin:0 auto;padding:18px 24px;display:flex;align-items:baseline;justify-content:space-between;gap:16px;}
+  .wordmark{font-family:var(--display);font-weight:600;font-size:24px;letter-spacing:-0.01em;color:var(--ink);text-decoration:none;}
+  .wordmark .tld{color:var(--current);}
+  .masthead-label{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);}
+  .ticker{border-bottom:1px solid var(--line);background:var(--ink);overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .ticker-inner{display:flex;white-space:nowrap;padding:10px 24px;}
+  .ticker-tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;color:var(--volt);padding-right:20px;flex:none;}
+  .tick{font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;color:#CFE0D6;padding-right:28px;flex:none;}
+  .tick b{color:#FFFFFF;font-weight:500;}
+  .tick .due{color:var(--volt);}
+  .article{max-width:720px;margin:0 auto;padding:56px 24px 40px;}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--current);margin-bottom:18px;}
+  h1{font-family:var(--display);font-weight:600;font-size:clamp(30px,5.4vw,44px);line-height:1.12;letter-spacing:-0.015em;margin-bottom:22px;}
+  .meta{font-family:var(--mono);font-size:12.5px;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:6px 18px;padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:26px;}
+  .lede{font-size:19.5px;line-height:1.6;color:var(--ink);font-weight:400;margin-bottom:14px;}
+  .lede + .lede-note{font-size:14px;color:var(--ink-soft);margin-bottom:8px;}
+  section{margin-top:44px;}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--current);margin-bottom:8px;}
+  h2{font-family:var(--display);font-weight:600;font-size:26px;line-height:1.25;letter-spacing:-0.01em;margin-bottom:14px;}
+  section p{margin-bottom:14px;}
+  section p:last-child{margin-bottom:0;}
+  .pubs{list-style:none;margin-top:6px;}
+  .pubs li{padding:14px 0 14px 18px;border-left:3px solid var(--current-tint);margin-bottom:10px;}
+  .pubs li:hover{border-left-color:var(--current);}
+  .pub-source{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:3px;}
+  .pubs a{font-weight:600;text-decoration:none;}
+  .pubs a:hover{text-decoration:underline;}
+  .pubs p{font-size:15.5px;color:var(--ink);margin:4px 0 0;}
+  .watch{background:var(--volt-tint);border:1px solid #EBD9B4;border-radius:6px;padding:22px 24px;margin-top:14px;}
+  .watch dl{display:grid;grid-template-columns:max-content 1fr;gap:10px 18px;}
+  .watch dt{font-family:var(--mono);font-size:12.5px;font-weight:500;letter-spacing:.06em;color:#8A5F10;white-space:nowrap;padding-top:2px;}
+  .watch dd{font-size:15.5px;}
+  @media (max-width:560px){.watch dl{grid-template-columns:1fr;gap:2px;}.watch dd{margin-bottom:10px;}}
+  .article-footer{max-width:720px;margin:0 auto;padding:0 24px 72px;}
+  .method{border-top:1px solid var(--line);padding-top:22px;font-size:13.5px;line-height:1.6;color:var(--ink-soft);}
+  .method strong{color:var(--ink);font-weight:600;}
+  .colophon{margin-top:18px;font-family:var(--mono);font-size:12px;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:6px 18px;}
 </style>
 </head>
 <body>
 
 <header class="masthead">
   <div class="masthead-inner">
-    <a href="index.html" aria-label="flink.energy home"><img src="logo.png" alt="Flink Energy"></a>
-    <span class="masthead-label">Daily briefing <span class="o">·</span> Bankability &amp; pre-FID</span>
+    <a class="wordmark" href="/">flink<span class="tld">.energy</span></a>
+    <span class="masthead-label">Daily briefing · Bankability &amp; pre-FID</span>
   </div>
 </header>
 
 <div class="ticker" aria-label="Tracked pre-FID milestones">
   <div class="ticker-inner">
     <span class="ticker-tag">FID watch ▸</span>
-    <span class="tick"><b>Norfolk Vanguard E+W</b> · UK · 3.1 GW wind · <span class="due">FID due summer '26</span></span>
-    <span class="tick"><b>Meranti Green Steel</b> · Oman · 2.5 Mtpa green HBI · <span class="due">FID due mid-'26</span></span>
-    <span class="tick"><b>Gennaker</b> · DE · 976.5 MW wind · <span class="due">FID due summer '26</span></span>
-    <span class="tick"><b>EHB auction 3 winners</b> · EU · 1.1 GW electrolysis · <span class="due">grants Q4 '26</span></span>
-    <span class="tick"><b>P&#259;r&#259;u 2</b> · RO · 342 MW PV + 150 MW BESS · <span class="due">close ~Nov '26</span></span>
+    <span class="tick"><b>Parau 2</b> · Romania · 342 MW solar + 150 MW/300 MWh BESS · <span class="due">financial close due within ~3 months of 14 Aug 2026 signing</span></span>
+    <span class="tick"><b>Aukera Quirnbach/Rehweiler/Hueffler/Schellweiler</b> · Germany · 44 MW solar · <span class="due">financial close reached; COD due early 2027</span></span>
+    <span class="tick"><b>OMV Schwechat electrolyzer</b> · Austria · 140 MW · <span class="due">EIB EUR 450m committed; refinery-captive offtake in place</span></span>
+    <span class="tick"><b>CIP Growth Markets Fund II</b> · Eastern Europe, Asia, Latin America · USD 3bn fund, USD 1.4bn uncommitted · <span class="due">deployment ongoing across 15 markets</span></span>
+    <span class="tick"><b>US solar and wind construction-start pipeline</b> · United States · 170+ GW positioned · <span class="due">advanced against the 4 July 2026 OBBBA deadline</span></span>
   </div>
 </div>
 
 <main>
   <article class="article">
+
     <p class="kicker">Market intelligence · Renewables finance</p>
 
-    <h1>De-risking by design: public guarantees, AI offtake and a US$750m iron-air raise mark out where capital feels safe</h1>
+    <h1>Lenders fund the contracted floor, equity carries the merchant tail</h1>
 
     <div class="meta">
-      <span>Edition #003</span>
+      <span>Edition 002</span>
       <span>18 August 2026</span>
-      <span>Since Monday&rsquo;s edition</span>
-      <span>≈ 5 min read</span>
+      <span>24 hours to 18 August 2026 (Europe/Berlin) · items published 17–18 August</span>
+      <span>7 min read</span>
     </div>
 
-    <p class="lede">Every deal in the past day is an exercise in manufacturing safety for capital. In Romania, a solar-plus-storage hybrid stacks development banks, an InvestEU guarantee and a 15-year CfD under a single financing. In the US, growth equity hands iron-air developer Form Energy US$750 million while a multi-day storage startup converts AI data-centre demand into a 1 GW deployment agreement. Ørsted signs up the operator for its Hornsea 3 battery a year before it runs. And a pointed new analysis argues Europe&rsquo;s banks will lend to hydrogen only where demand is captive &mdash; everything else, for now, stays equity&rsquo;s problem.</p>    <section>
-      <p class="eyebrow">Solar PV</p>
-      <h2>Romania&rsquo;s biggest CfD award shows the full de-risking stack in one deal</h2>
-      <p>Econergy has <a href="https://www.energy-storage.news/econergy-signs-financing-agreements-for-150mw-solar-plus-storage-project-in-romania/">signed financing agreements for its P&#259;r&#259;u 2 project</a> in Bra&#537;ov County &mdash; 342&nbsp;MW of solar PV plus a 150&nbsp;MW battery &mdash; with a six-lender consortium spanning the EBRD, the Black Sea Trade and Development Bank, Exim Banca Rom&acirc;neasc&#259;, NLB, OTP and Intesa Sanpaolo Romania, for a package of roughly &euro;229&nbsp;million. Around US$132&nbsp;million of the main facility sits under an InvestEU guarantee, and the project carries the largest capacity award in Romania&rsquo;s CfD mechanism to date: 125&nbsp;MW at US$57.18/MWh, fixed for 15 years from commercial operation. Financial close is expected within about three months.</p>
-      <p>The anatomy is the story: multilateral debt, a public guarantee and a long-dated CfD layered under a merchant-flavoured hybrid &mdash; the complete de-risking toolkit applied in a market that has, within two years, become one of Europe&rsquo;s busiest for storage-backed solar.</p>
+    <p class="lede">Today's window reads as one credit test applied across four technologies: senior debt is available where a contract or a regulator supplies the revenue, and nowhere else. The <a href="https://cleantechnica.com/2026/08/18/europe-banks-hydrogen-niche-bankability/">EIB's EUR 450 million</a> for a hydrogen plant physically piped into an OMV refinery, the <a href="https://www.energy-storage.news/econergy-signs-financing-agreements-for-150mw-solar-plus-storage-project-in-romania/">EUR 229 million six-lender package</a> behind a Romanian hybrid anchored on a 15-year CfD, and a <a href="https://www.energyglobal.com/solar/18082026/aukera-energy-reaches-financial-close-on-44-mw-solar-pv-project-in-germany/">44 MW German close underwritten on the EEG tariff</a> are the same structure at three scales. The merchant tail in each case is absorbed by multilateral cover, sponsor equity or pre-FID funds such as <a href="https://www.pv-tech.org/cip-secures-us3-billion-to-develop-large-scale-renewable-energy-projects/">CIP's newly closed USD 3 billion Growth Markets Fund II</a>. The counterweight is the US, where <a href="https://www.pv-tech.org/us-clean-energy-tax-credit-transfers-us21-billion-h1-2026-crux/">tax credit transfer volume of USD 21 billion in H1</a> shows monetization depth intact overall but collapsing for wind.</p>
+
+    <section>
+      <p class="eyebrow">Hydrogen</p>
+      <h2>Captive offtake is the dividing line</h2>
+      <p>European lender appetite for hydrogen is narrowing to projects with a captive industrial buyer attached to the asset. Analyst Michael Barnard, writing on <a href="https://cleantechnica.com/2026/08/18/europe-banks-hydrogen-niche-bankability/">CleanTechnica</a>, contrasts the European Investment Bank's EUR 450 million loan to OMV for a 140 MW green hydrogen plant at the Schwechat refinery in Austria with the experience of smaller merchant developers. The Schwechat case is not a demand forecast: the plant feeds the refinery by direct pipeline and displaces fossil-derived hydrogen the site already consumes, so lenders underwrite a known buyer and a product substitution.</p>
+      <p>The counterexample in the same piece is Dutch industrial gas company Holthausen, loss-making in hydrogen for years, which was <a href="https://cleantechnica.com/2026/08/18/europe-banks-hydrogen-niche-bankability/">refused financing by conventional banks including its own</a> and ultimately assembled mission-aligned lending, development capital and government support instead. On the failure of merchant hydrogen financings, <a href="https://cleantechnica.com/2026/08/18/europe-banks-hydrogen-niche-bankability/">Barnard reports European Commission and International Energy Agency assessments</a> that continue to point to "weak long-term offtake, resistance to paying a green premium" and the gap between announced and contracted demand. The practical diligence test transfers to other emerging fuels: without firm long-term offtake, sponsors should assume commercial bank debt is unavailable and build the stack from concessional and state-supported money.</p>
     </section>
 
     <section>
-      <p class="eyebrow">Storage / BESS</p>
-      <h2>Long-duration storage gets its two missing ingredients: growth capital and a demand anchor</h2>
-      <p>Iron-air developer Form Energy has <a href="https://www.energy-storage.news/iron-air-us-ldes-startup-form-energy-secures-us750-million-series-g-financing/">secured a US$750&nbsp;million Series G round led by T.&nbsp;Rowe Price</a> &mdash; among the largest single equity cheques the long-duration segment has seen. The demand side moved on the same day: multi-day storage startup Noon Energy signed <a href="https://www.energy-storage.news/multi-day-energy-storage-startup-noon-energy-makes-1gw-us-ai-infrastructure-deployment-agreement/">a 1&nbsp;GW deployment agreement with Sabanci Renewables for US AI infrastructure</a>, turning data-centre load into exactly the kind of captive offtake that lenders have been demanding from newer chemistries.</p>
-      <p>Construction news reinforces the platform pattern: <a href="https://www.energy-storage.news/fluence-and-german-utility-leag-begin-construction-of-second-large-scale-bess-project-under-partnership/">Fluence and utility LEAG have started building their second large-scale German BESS</a> under the partnership that is also delivering Europe&rsquo;s largest battery project, while in Australia <a href="https://www.energy-storage.news/ausgrids-plus-grid-storage-breaks-ground-on-400mwh-steel-river-east-bess-in-australia/">Ausgrid&rsquo;s PLUS Grid Storage broke ground on the 200&nbsp;MW/400&nbsp;MWh Steel River East system</a> &mdash; its first project delivery.</p>
+      <p class="eyebrow">Cross-technology</p>
+      <h2>US tax credit transfers and pre-FID equity</h2>
+      <p><strong>US tax credit transfers.</strong> Crux's mid-year data, reported by <a href="https://www.pv-tech.org/us-clean-energy-tax-credit-transfers-us21-billion-h1-2026-crux/">PV Tech</a>, puts H1 2026 transfer volume at USD 21 billion against USD 17.7 billion in H2 2025 — but 12.5% below H1 2025, even though Q2 2026 set a quarterly record at USD 14.9 billion. Crux projects USD 47.5 billion to USD 49 billion for the full year. The mix moved more than the total: solar's share fell to 30% from 35% a year earlier, and wind's to 7.5% from 23%, with wind hit by prohibited foreign entity rules and permitting headwinds. Solar-plus-storage more than doubled its share year on year, and 32% of surveyed participants said they were shifting toward storage to access ITC eligibility.</p>
+      <p>The timing is distorted. The OBBBA's 4 July construction-start deadline for solar and wind broke normal seasonality, with <a href="https://www.pv-tech.org/us-clean-energy-tax-credit-transfers-us21-billion-h1-2026-crux/">more than 170 GW of solar and wind capacity positioned to advance</a> ahead of it. Transfer proceeds now sit beside sponsor equity and senior debt in routine US capital-stack sizing, so the wind figure matters directly to wind sponsors: credit monetization looks thinner and likely more expensive. Lenders should treat the H1 pull-forward as an artifact and stress-test 2027 rather than extrapolate Q2. Broader context from the same dataset: US clean energy capex hit USD 74 billion in H1 2026, including USD 59 billion of greenfield debt financing, with full-year capex projected at USD 180 billion versus USD 155 billion in 2025.</p>
+      <p><strong>Pre-FID equity.</strong> Copenhagen Infrastructure Partners held the final close of Growth Markets Fund II at USD 3 billion, targeting 15 high-growth, middle-income markets across Eastern Europe, Asia and Latin America, <a href="https://www.pv-tech.org/cip-secures-us3-billion-to-develop-large-scale-renewable-energy-projects/">per PV Tech</a>. USD 1.6 billion is already committed across nine investments in solar PV, battery storage and solar-plus-storage hybrids — more than half deployed at close, which reads as a live pipeline rather than a dry-powder announcement. The predecessor fund GMF I targets roughly 8.7 GW across more than 50 projects. CIP partner Niels Holst describes an LP base spanning sovereign wealth funds, pension funds, impact-focused family offices and development finance institutions; DFI participation alongside pensions usually travels with political-risk cover and ESG standards that make later senior debt easier to raise. This is capital arriving before FID, the layer that has been scarcest in emerging markets.</p>
+    </section>
+
+    <section>
+      <p class="eyebrow">Solar-plus-storage</p>
+      <h2>Six lenders, a 15-year CfD and a merchant tail</h2>
+      <p>Econergy signed financing agreements worth about EUR 229 million for the Parau 2 hybrid in Romania with a six-lender group: EBRD, Black Sea Trade and Development Bank, Exim Banca Romaneasca, NLB, OTP Bank and Banca Comerciala Intesa Sanpaolo Romania, <a href="https://www.energy-storage.news/econergy-signs-financing-agreements-for-150mw-solar-plus-storage-project-in-romania/">reports Energy-Storage.news</a>. The asset pairs <a href="https://www.pv-tech.org/ebrd-finances-econergy-342mw-solar-plus-storage-romania-project/">342 MW of solar PV with a 150 MW/300 MWh battery</a>. The revenue anchor is a 125 MW contract for difference running 15 years from commercial operation, with the strike <a href="https://www.energy-storage.news/econergy-signs-financing-agreements-for-150mw-solar-plus-storage-project-in-romania/">reported by Energy-Storage.news in US dollars at USD 57.18/MWh, alongside an InvestEU guarantee of roughly USD 132 million</a>; no euro equivalent is given at source for either figure.</p>
+      <p>The tranche structure is the transferable part. The EBRD's own EUR 120 million splits into an A loan of up to EUR 57 million and a B loan of up to EUR 63 million, the latter including a EUR 3.6 million debt service reserve facility from Privredna banka Zagreb and NLB; Intesa Sanpaolo and Exim Banca Romaneasca jointly provided a EUR 25 million VAT facility alongside a EUR 9.5 million letter-of-credit facility supporting CfD requirements, <a href="https://www.pv-tech.org/ebrd-finances-econergy-342mw-solar-plus-storage-romania-project/">per PV Tech</a>, which reports this as the EBRD's first hybrid solar-plus-storage financing in Romania. Note the gearing of risk: the CfD covers 125 MW against 342 MW of solar, so five commercial and regional banks accepted a substantial merchant and arbitrage tail, priced with a DSRF and dedicated CfD collateral. Econergy head of energy storage Joshua Murphy points to "a hybridisation strategy to add battery storage to all of those" operating solar assets, <a href="https://www.energy-storage.news/econergy-signs-financing-agreements-for-150mw-solar-plus-storage-project-in-romania/">per Energy-Storage.news</a>, which also records that <a href="https://www.energy-storage.news/econergy-signs-financing-agreements-for-150mw-solar-plus-storage-project-in-romania/">agreements were announced on 14 August 2026, with financial close expected within about three months of signing and commercial operation targeted for late 2027 or early 2028</a>.</p>
+    </section>
+
+    <section>
+      <p class="eyebrow">Solar</p>
+      <h2>A 44 MW German close on the EEG tariff</h2>
+      <p>Aukera Energy reached financial close on a 44 MW solar PV project spanning Quirnbach, Rehweiler, Hueffler and Schellweiler in Rhineland-Palatinate, with Deutsche Kreditbank as lender, <a href="https://www.energyglobal.com/solar/18082026/aukera-energy-reaches-financial-close-on-44-mw-solar-pv-project-in-germany/">reports Energy Global</a>. The debt quantum was not disclosed. The EEG-backed tariff under Germany's Renewable Energy Sources Act supplies the long-term revenue visibility underpinning the financing; pre-construction is under way and commercial operation is targeted for early 2027.</p>
+      <p>A small ticket, but the window's cleanest datapoint on what German lenders will still underwrite for mid-size ground-mount PV: regulated tariff revenue, not merchant or PPA-priced cash flow. Aukera Germany managing director Kemal Keskin calls it "our fourth financial close in Germany", against a stated German pipeline exceeding 1 GW of solar PV and battery storage. Repeat closes on standardized terms compress transaction cost and timeline for sponsors assembling portfolios. The open question is whether the structure survives as new German capacity increasingly prices off capture-rate risk rather than tariff support.</p>
     </section>
 
     <section>
       <p class="eyebrow">Wind</p>
-      <h2>Ørsted contracts the revenue layer a year early; T&uuml;rkiye opens a new pre-FID pipeline</h2>
-      <p>Ørsted has <a href="https://www.offshorewind.biz/2026/08/18/hornsea-3-battery-energy-storage-to-start-operations-next-year-orsted-selects-arenkos-platform-to-operate-bess/">selected Arenko&rsquo;s platform to operate the battery storage at Hornsea 3</a>, due to start operations next year &mdash; a wind major locking in the optimisation layer of a co-located asset well before commissioning, the same operations-first logic that ran through yesterday&rsquo;s Coalburn close. On the pipeline side, <a href="https://www.offshorewind.biz/2026/08/18/turkiye-to-hold-first-offshore-wind-tender-in-early-2027/">T&uuml;rkiye will hold its first offshore wind tender in early 2027</a>; the auction design will decide from day one whether the new market produces bankable revenue streams or stranded seabed. And in the US, <a href="https://www.offshorewind.biz/2026/08/18/four-turbines-to-go-at-us-offshore-wind-farm-set-to-power-rhode-island-and-connecticut/">Revolution Wind is down to its final four turbines</a> &mdash; construction risk quietly retiring on a project whose sector faces loud permitting noise elsewhere.</p>
+      <h2>Present only as a secondary angle</h2>
+      <p>No standalone wind item in the window. Wind appeared only as a secondary angle inside the cross-technology coverage above — the collapse of its US tax credit transfer share to <a href="https://www.pv-tech.org/us-clean-energy-tax-credit-transfers-us21-billion-h1-2026-crux/">7.5% from 23% a year earlier</a>, and its absence from CIP's stated target technologies for Growth Markets Fund II.</p>
     </section>
 
     <section>
-      <p class="eyebrow">Hydrogen</p>
-      <h2>Where the lending boundary actually sits</h2>
-      <p>A sharp piece of analysis published today argues that <a href="https://cleantechnica.com/2026/08/18/europe-banks-hydrogen-niche-bankability/">Europe&rsquo;s banks are treating hydrogen as a niche, not an economy</a>: credit flows where demand is captive and credible &mdash; refineries, fertiliser, industrial clusters &mdash; while merchant hydrogen still fails on offtake, margins and debt capacity. The engineering keeps moving regardless: the Port of Antwerp-Bruges now hosts a commercial-scale AEM electrolyser from Power to Hydrogen, producing high-purity hydrogen for real industrial users. The gap between what can be built and what can be financed remains the sector&rsquo;s defining spread &mdash; and the number to watch stays the same: the 2.5-year financial-close clock that starts for the EU auction winners in Q4.</p>
+      <p class="eyebrow">Geothermal</p>
+      <h2>No items in the window.</h2>
     </section>
 
     <section>
-      <p class="eyebrow">Capital &amp; Policy</p>
-      <h2>Distributed flexibility gets a policy tailwind on two continents</h2>
-      <p>California&rsquo;s Assembly Appropriations Committee <a href="https://www.energy-storage.news/california-advances-two-bills-to-expand-virtual-power-plants-reduce-energy-rates/">advanced two bills to expand virtual power plants</a> and cut energy rates, while New South Wales <a href="https://www.energy-storage.news/new-south-wales-cuts-battery-storage-costs-by-up-to-40-for-businesses-and-apartment-buildings-in-the-australian-state/">introduced upfront discounts of up to 40% for commercial and apartment battery installations</a>. Neither moves a project-finance model on its own &mdash; but both widen the aggregatable resource base that VPP and tolling revenues are increasingly built on.</p>
+      <p class="eyebrow">CCS</p>
+      <h2>No items in the window.</h2>
     </section>
 
     <section>
@@ -152,9 +151,14 @@
       <h2>White papers &amp; research</h2>
       <ul class="pubs">
         <li>
-          <span class="pub-source">Report · Ember · August 2026</span>
-          <a href="https://www.energy-storage.news/battery-storage-unlocks-the-era-of-anytime-solar-climate-consultancy-ember-says-in-new-report/">Battery storage unlocks the era of &ldquo;anytime solar&rdquo;</a>
-          <p>The climate consultancy maps how pairing storage with PV converts midday generation into a dispatchable, higher-value product &mdash; the economic basis of the hybrid deals now reaching financial close.</p>
+          <span class="pub-source">Report · Crux (covered by PV Tech) · 18 August 2026</span>
+          <a href="https://www.pv-tech.org/us-clean-energy-tax-credit-transfers-us21-billion-h1-2026-crux/">The State of Clean Energy Finance: 2026 Mid-Year Market Intelligence Report</a>
+          <p>USD 21bn of H1 transfers with wind's share down to 7.5% from 23%; full-year projected at USD 47.5-49bn.</p>
+        </li>
+        <li>
+          <span class="pub-source">Analyst insight · CleanTechnica (Michael Barnard) · 18 August 2026</span>
+          <a href="https://cleantechnica.com/2026/08/18/europe-banks-hydrogen-niche-bankability/">Europe's Banks Are Treating Hydrogen As A Niche, Not An Economy</a>
+          <p>Captive, physically connected offtake is the dividing line between funded and refused hydrogen projects.</p>
         </li>
       </ul>
     </section>
@@ -164,29 +168,31 @@
       <h2>What we are tracking</h2>
       <div class="watch">
         <dl>
-          <dt>Summer 2026</dt>
-          <dd>RWE / KKR Norfolk Vanguard East and West (3.1&nbsp;GW) &mdash; FID, non-recourse financing and partnership close targeted together.</dd>
-          <dt>Mid-2026</dt>
-          <dd>Meranti Green Steel (2.5&nbsp;Mtpa, Duqm) &mdash; FID on the largest near-term hydrogen-linked iron project, offtake fully contracted.</dd>
-          <dt>~Nov 2026</dt>
-          <dd>Econergy&rsquo;s P&#259;r&#259;u 2 (342&nbsp;MW PV + 150&nbsp;MW BESS) &mdash; financial close expected roughly three months after signing.</dd>
-          <dt>Q4 2026</dt>
-          <dd>European Hydrogen Bank auction-three grant signatures &mdash; the 2.5-year financial-close clock starts for 1.1&nbsp;GW of electrolysis.</dd>
+          <dt>Within roughly three months of 14 August 2026</dt>
+          <dd>Parau 2 financial close, the confirmation that the six-lender CEE hybrid template converts from signing to funding.</dd>
+          <dt>H2 2026</dt>
+          <dd>Whether US transfer volume tracks Crux's USD 47.5-49bn full-year projection, or whether the 4 July pull-forward leaves a second-half hole.</dd>
+          <dt>2027</dt>
+          <dd>US wind tax credit monetization after the OBBBA construction-start deadline; a 7.5% share is the base to watch against, not the 23% of a year ago.</dd>
           <dt>Early 2027</dt>
-          <dd>T&uuml;rkiye&rsquo;s first offshore wind tender &mdash; a new market&rsquo;s bankability will be set by its auction design.</dd>
+          <dd>Aukera's 44 MW Rhineland-Palatinate COD, and whether further German closes price off EEG tariff or capture rate.</dd>
+          <dt>Late 2027 to early 2028</dt>
+          <dd>Parau 2 commercial operation and first evidence of how the uncontracted 217 MW of solar plus arbitrage revenue performs.</dd>
+          <dt>Ongoing</dt>
+          <dd>Deployment of CIP Growth Markets Fund II's remaining USD 1.4bn across its 15 target markets.</dd>
         </dl>
       </div>
     </section>
+
   </article>
 
   <footer class="article-footer">
-    <a class="backlink" href="index.html">← All editions</a>
     <div class="method">
-      <p><strong>About this briefing.</strong> Produced by an automated editorial pipeline — collection, curation, summarisation and a quality gate — screening news, white papers and research for bankability and pre-FID signals across hydrogen, battery storage, solar and wind. Sources are linked in place. Nothing here constitutes investment advice.</p>
+      <p><strong>About this briefing.</strong> Produced by an automated editorial pipeline — collection, curation, summarisation and a quality gate — screening news, white papers and research for bankability and pre-FID signals across hydrogen, battery storage, solar and wind. Sources are linked in place. Daily editions cover the previous 24 hours. Nothing here constitutes investment advice.</p>
     </div>
     <div class="colophon">
-      <span>© 2026 Flink Energy · Making Renewables Bankable</span>
-      <span>Edition #003</span>
+      <span>© 2026 flink.energy</span>
+      <span>Edition #002</span>
       <span>Contact: briefing@flink.energy</span>
     </div>
   </footer>
