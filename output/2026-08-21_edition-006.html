@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banks lean in — flink.energy daily briefing, 21 August 2026</title>
+<meta name="description" content="Key Capture Energy closes US$300m with Standard Chartered for NYISO and MISO storage buildout, US utilities and IPPs keep converting pipeline into deals, and battery manufacturing adds Western depth.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,450;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F6F9F6; --ink:#122A1F; --ink-soft:#50655A;
+    --current:#0E7A5F; --current-tint:#E3F0EA;
+    --volt:#DE9A26; --volt-tint:#FBF1DC;
+    --line:#D9E4DD;
+    --display:"Fraunces",Georgia,serif;
+    --body:"IBM Plex Sans",system-ui,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition:none !important;}}
+  body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  a{color:var(--current);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;transition:color .15s ease;}
+  a:hover{color:var(--ink);}
+  a:focus-visible{outline:2px solid var(--current);outline-offset:3px;border-radius:2px;}
+  .masthead{border-bottom:1px solid var(--line);background:var(--paper);}
+  .masthead-inner{max-width:1040px;margin:0 auto;padding:18px 24px;display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+  .wordmark{font-family:var(--display);font-weight:600;font-size:24px;letter-spacing:-0.01em;color:var(--ink);text-decoration:none;}
+  .wordmark .tld{color:var(--current);}
+  .masthead-label{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);}
+  .site-nav{margin-left:auto;display:flex;gap:22px;font-family:var(--mono);
+    font-size:13px;letter-spacing:.04em}
+  .site-nav a{border:none;color:var(--ink-soft);text-transform:uppercase;
+    text-decoration:none}
+  .site-nav a:hover{color:#007A72}
+  .ticker{border-bottom:1px solid var(--line);background:var(--ink);overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .ticker-inner{display:flex;white-space:nowrap;padding:10px 24px;}
+  .ticker-tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;color:var(--volt);padding-right:20px;flex:none;}
+  .tick{font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;color:#CFE0D6;padding-right:28px;flex:none;}
+  .tick b{color:#FFFFFF;font-weight:500;}
+  .tick .due{color:var(--volt);}
+  .article{max-width:720px;margin:0 auto;padding:56px 24px 40px;}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--current);margin-bottom:18px;}
+  h1{font-family:var(--display);font-weight:600;font-size:clamp(30px,5.4vw,44px);line-height:1.12;letter-spacing:-0.015em;margin-bottom:22px;}
+  .meta{font-family:var(--mono);font-size:12.5px;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:6px 18px;padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:26px;}
+  .lede{font-size:19.5px;line-height:1.6;color:var(--ink);font-weight:400;margin-bottom:14px;}
+  .lede + .lede-note{font-size:14px;color:var(--ink-soft);margin-bottom:8px;}
+  section{margin-top:44px;}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--current);margin-bottom:8px;}
+  h2{font-family:var(--display);font-weight:600;font-size:26px;line-height:1.25;letter-spacing:-0.01em;margin-bottom:14px;}
+  section p{margin-bottom:14px;}
+  section p:last-child{margin-bottom:0;}
+  .pubs{list-style:none;margin-top:6px;}
+  .pubs li{padding:14px 0 14px 18px;border-left:3px solid var(--current-tint);margin-bottom:10px;}
+  .pubs li:hover{border-left-color:var(--current);}
+  .pub-source{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:3px;}
+  .pubs a{font-weight:600;text-decoration:none;}
+  .pubs a:hover{text-decoration:underline;}
+  .pubs p{font-size:15.5px;color:var(--ink);margin:4px 0 0;}
+  .watch{background:var(--volt-tint);border:1px solid #EBD9B4;border-radius:6px;padding:22px 24px;margin-top:14px;}
+  .watch dl{display:grid;grid-template-columns:max-content 1fr;gap:10px 18px;}
+  .watch dt{font-family:var(--mono);font-size:12.5px;font-weight:500;letter-spacing:.06em;color:#8A5F10;white-space:nowrap;padding-top:2px;}
+  .watch dd{font-size:15.5px;}
+  @media (max-width:560px){.watch dl{grid-template-columns:1fr;gap:2px;}.watch dd{margin-bottom:10px;}}
+  .article-footer{max-width:720px;margin:0 auto;padding:0 24px 72px;}
+  .method{border-top:1px solid var(--line);padding-top:22px;font-size:13.5px;line-height:1.6;color:var(--ink-soft);}
+  .method strong{color:var(--ink);font-weight:600;}
+  .colophon{margin-top:18px;font-family:var(--mono);font-size:12px;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:6px 18px;}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="wordmark" href="/">flink<span class="tld">.energy</span></a>
+    <span class="masthead-label">Daily briefing · Bankability &amp; pre-FID</span>
+    <nav class="site-nav">
+      <a href="index.html">Briefing</a>
+      <a href="research.html">Research</a>
+      <a href="library.html">Library</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ticker" aria-label="Tracked pre-FID milestones">
+  <div class="ticker-inner">
+    <span class="ticker-tag">FID watch ▸</span>
+    <span class="tick"><b>Parau 2</b> · Romania · 342 MW solar + 150 MW/300 MWh BESS · <span class="due">financial close due ~Nov 2026</span></span>
+    <span class="tick"><b>Hua&ntilde;il</b> · Chile · 200 MW/1 GWh BESS · <span class="due">RTB reached 14 Aug; financing next</span></span>
+    <span class="tick"><b>Villeta</b> · Paraguay · US$665m H&#8322;-to-fertiliser · <span class="due">power tariff clarity due Sep 2026</span></span>
+    <span class="tick"><b>UK HAR1 projects</b> · H&#8322; · <span class="due">awards settling into construction 2026</span></span>
+    <span class="tick"><b>Norfolk Vanguard</b> · UK · 3.1 GW wind · <span class="due">FID watch</span></span>
+  </div>
+</div>
+
+<main>
+  <article class="article">
+
+    <p class="kicker">Market intelligence · Renewables finance</p>
+
+    <h1>Banks lean in: Standard Chartered's US$300m for Key Capture caps a contracted-revenue week</h1>
+
+    <div class="meta">
+      <span>Edition 006</span>
+      <span>21 August 2026</span>
+      <span>24 hours to 21 August 2026 (Europe/Berlin) · items published 20–21 August</span>
+      <span>4 min read</span>
+    </div>
+
+    <p class="lede">The week closes with a bank writing a nine-figure cheque for storage growth. Key Capture Energy's US$300m facility from Standard Chartered, aimed at NYISO and MISO buildout, extends the pattern running through every edition this week: capital follows contracted, de-risked revenue. Around it, US utilities and IPPs kept converting pipeline into deals, and the battery supply chain added Western manufacturing depth — the tangible-criteria layer of storage bankability.</p>
+
+    <section>
+      <p class="eyebrow">Storage / capital</p>
+      <h2>An international bank backs the US storage build</h2>
+      <p>US developer Key Capture Energy has <a href="https://www.energy-storage.news/key-capture-energy-raises-us300-million-from-standard-chartered-with-ny-iso-and-miso-deployments-in-mind/">closed a US$300 million financing agreement with Standard Chartered</a>, earmarked for battery deployments in the NYISO and MISO markets. A British multinational bank stepping into US storage at this scale — amid federal policy noise — says the lender pool for the asset class is still widening, and that structured, market-revenue storage in organised ISOs has crossed into mainstream bank credit.</p>
+      <p>What to watch: which projects the facility actually carries to financial close, and on what revenue mix — capacity market, ancillary, arbitrage — since that mix is becoming the real benchmark for US merchant-adjacent storage debt.</p>
+    </section>
+
+    <section>
+      <p class="eyebrow">Storage / US market</p>
+      <h2>Utilities and IPPs keep the deal flow moving</h2>
+      <p>Energy-Storage.News' <a href="https://www.energy-storage.news/us-roundup-bess-projects-and-deals-for-edp-renewables-tucson-electric-power-and-edf/">latest US roundup</a> tracks EDP Renewables, Tucson Electric Power and EDF Power Solutions advancing BESS projects and agreements across California, Arizona and Nevada. The composition matters more than any single deal: utility procurement, IPP development and asset recycling are all running simultaneously — the liquidity conditions under which project debt gets cheaper.</p>
+    </section>
+
+    <section>
+      <p class="eyebrow">Manufacturing &amp; supply chain</p>
+      <h2>The tangible layer moves onshore</h2>
+      <p>LG Energy Solution has <a href="https://www.energy-storage.news/lg-energy-solution-begins-lfp-and-nmc-bess-and-ev-cell-production-at-michigan-factory/">begun producing LFP and NMC cells for BESS and EVs at its Michigan factory</a>, and Australia's Allegro Energy <a href="https://www.energy-storage.news/australias-allegro-energy-partners-with-jena-batteries-to-scale-microemulsion-flow-battery-manufacturing/">partnered with Jena Batteries to scale manufacturing of its microemulsion flow battery</a>. Supplier bankability is a tangible criterion — certifications, warranties, factory audits — and every credible Western production line added makes that evidence easier to assemble for domestic-content-sensitive financings.</p>
+    </section>
+
+    <section>
+      <p class="eyebrow">New publications</p>
+      <h2>White papers &amp; research</h2>
+      <ul class="pubs">
+        <li>
+          <span class="pub-source">Market forecast · Windpower Monthly · 18 August 2026</span>
+          <a href="https://www.windpowermonthly.com/article/1967749/windpower-intelligence-global-forecast-august-2026">Windpower Intelligence Global Forecast: August 2026</a>
+          <p>The month's sanctioning picture in one place: repowering finance in the US, approvals in Australia and Canada, and 20 GW of offshore ambition surfacing in Vietnam — activity concentrated in consents and brownfield debt rather than new offshore FIDs.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <p class="eyebrow">Watch list</p>
+      <h2>What we are tracking</h2>
+      <div class="watch">
+        <dl>
+          <dt>September 2026</dt>
+          <dd>Villeta (Paraguay) power tariff clarity due — the open condition under Atome's US$665m FID package.</dd>
+          <dt>October 2026</dt>
+          <dd>P2X Solutions' contracted e-methane deliveries begin — first cash flows from RFNBO mandate demand.</dd>
+          <dt>~November 2026</dt>
+          <dd>Parau 2 (Romania) financial close window closes.</dd>
+          <dt>Late 2026 onward</dt>
+          <dd>Key Capture's Standard Chartered facility converting into named NYISO/MISO project closings.</dd>
+          <dt>Ongoing</dt>
+          <dd>Hua&ntilde;il (Chile) moving from ready-to-build toward financing — a marker for LATAM standalone BESS debt appetite.</dd>
+        </dl>
+      </div>
+    </section>
+
+  </article>
+
+  <footer class="article-footer">
+    <div class="method">
+      <p><strong>About this briefing.</strong> Produced by an automated editorial pipeline — collection, curation, summarisation and a quality gate — screening news, white papers and research for bankability and pre-FID signals across hydrogen, battery storage, solar and wind. Sources are linked in place. Daily editions cover the previous 24 hours. Nothing here constitutes investment advice.</p>
+    </div>
+    <div class="colophon">
+      <span>© 2026 flink.energy</span>
+      <span>Edition #006</span>
+      <span>Contact: briefing@flink.energy</span>
+    </div>
+  </footer>
+</main>
+
+</body>
+</html>

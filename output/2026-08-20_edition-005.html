@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contracted at the fence line — flink.energy daily briefing, 20 August 2026</title>
+<meta name="description" content="APA sanctions solar-plus-storage on the strength of a single mining offtake, BeGreen contracts Danske Commodities for BESS optimisation, and Australia's regulator maps a market reshaped by batteries.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,450;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F6F9F6; --ink:#122A1F; --ink-soft:#50655A;
+    --current:#0E7A5F; --current-tint:#E3F0EA;
+    --volt:#DE9A26; --volt-tint:#FBF1DC;
+    --line:#D9E4DD;
+    --display:"Fraunces",Georgia,serif;
+    --body:"IBM Plex Sans",system-ui,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition:none !important;}}
+  body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  a{color:var(--current);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;transition:color .15s ease;}
+  a:hover{color:var(--ink);}
+  a:focus-visible{outline:2px solid var(--current);outline-offset:3px;border-radius:2px;}
+  .masthead{border-bottom:1px solid var(--line);background:var(--paper);}
+  .masthead-inner{max-width:1040px;margin:0 auto;padding:18px 24px;display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+  .wordmark{font-family:var(--display);font-weight:600;font-size:24px;letter-spacing:-0.01em;color:var(--ink);text-decoration:none;}
+  .wordmark .tld{color:var(--current);}
+  .masthead-label{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);}
+  .site-nav{margin-left:auto;display:flex;gap:22px;font-family:var(--mono);
+    font-size:13px;letter-spacing:.04em}
+  .site-nav a{border:none;color:var(--ink-soft);text-transform:uppercase;
+    text-decoration:none}
+  .site-nav a:hover{color:#007A72}
+  .ticker{border-bottom:1px solid var(--line);background:var(--ink);overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .ticker-inner{display:flex;white-space:nowrap;padding:10px 24px;}
+  .ticker-tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;color:var(--volt);padding-right:20px;flex:none;}
+  .tick{font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;color:#CFE0D6;padding-right:28px;flex:none;}
+  .tick b{color:#FFFFFF;font-weight:500;}
+  .tick .due{color:var(--volt);}
+  .article{max-width:720px;margin:0 auto;padding:56px 24px 40px;}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--current);margin-bottom:18px;}
+  h1{font-family:var(--display);font-weight:600;font-size:clamp(30px,5.4vw,44px);line-height:1.12;letter-spacing:-0.015em;margin-bottom:22px;}
+  .meta{font-family:var(--mono);font-size:12.5px;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:6px 18px;padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:26px;}
+  .lede{font-size:19.5px;line-height:1.6;color:var(--ink);font-weight:400;margin-bottom:14px;}
+  .lede + .lede-note{font-size:14px;color:var(--ink-soft);margin-bottom:8px;}
+  section{margin-top:44px;}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--current);margin-bottom:8px;}
+  h2{font-family:var(--display);font-weight:600;font-size:26px;line-height:1.25;letter-spacing:-0.01em;margin-bottom:14px;}
+  section p{margin-bottom:14px;}
+  section p:last-child{margin-bottom:0;}
+  .pubs{list-style:none;margin-top:6px;}
+  .pubs li{padding:14px 0 14px 18px;border-left:3px solid var(--current-tint);margin-bottom:10px;}
+  .pubs li:hover{border-left-color:var(--current);}
+  .pub-source{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:3px;}
+  .pubs a{font-weight:600;text-decoration:none;}
+  .pubs a:hover{text-decoration:underline;}
+  .pubs p{font-size:15.5px;color:var(--ink);margin:4px 0 0;}
+  .watch{background:var(--volt-tint);border:1px solid #EBD9B4;border-radius:6px;padding:22px 24px;margin-top:14px;}
+  .watch dl{display:grid;grid-template-columns:max-content 1fr;gap:10px 18px;}
+  .watch dt{font-family:var(--mono);font-size:12.5px;font-weight:500;letter-spacing:.06em;color:#8A5F10;white-space:nowrap;padding-top:2px;}
+  .watch dd{font-size:15.5px;}
+  @media (max-width:560px){.watch dl{grid-template-columns:1fr;gap:2px;}.watch dd{margin-bottom:10px;}}
+  .article-footer{max-width:720px;margin:0 auto;padding:0 24px 72px;}
+  .method{border-top:1px solid var(--line);padding-top:22px;font-size:13.5px;line-height:1.6;color:var(--ink-soft);}
+  .method strong{color:var(--ink);font-weight:600;}
+  .colophon{margin-top:18px;font-family:var(--mono);font-size:12px;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:6px 18px;}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="wordmark" href="/">flink<span class="tld">.energy</span></a>
+    <span class="masthead-label">Daily briefing · Bankability &amp; pre-FID</span>
+    <nav class="site-nav">
+      <a href="index.html">Briefing</a>
+      <a href="research.html">Research</a>
+      <a href="library.html">Library</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ticker" aria-label="Tracked pre-FID milestones">
+  <div class="ticker-inner">
+    <span class="ticker-tag">FID watch ▸</span>
+    <span class="tick"><b>Parau 2</b> · Romania · 342 MW solar + 150 MW/300 MWh BESS · <span class="due">financial close due ~Nov 2026</span></span>
+    <span class="tick"><b>Hua&ntilde;il</b> · Chile · 200 MW/1 GWh BESS · <span class="due">RTB reached 14 Aug; financing next</span></span>
+    <span class="tick"><b>Villeta</b> · Paraguay · US$665m H&#8322;-to-fertiliser · <span class="due">power tariff clarity due Sep 2026</span></span>
+    <span class="tick"><b>UK HAR1 projects</b> · H&#8322; · <span class="due">awards settling into construction 2026</span></span>
+    <span class="tick"><b>Norfolk Vanguard</b> · UK · 3.1 GW wind · <span class="due">FID watch</span></span>
+  </div>
+</div>
+
+<main>
+  <article class="article">
+
+    <p class="kicker">Market intelligence · Renewables finance</p>
+
+    <h1>Contracted at the fence line: a miner's power deal carries a storage FID as batteries redraw Australia's market</h1>
+
+    <div class="meta">
+      <span>Edition 005</span>
+      <span>20 August 2026</span>
+      <span>24 hours to 20 August 2026 (Europe/Berlin) · items published 19–20 August</span>
+      <span>4 min read</span>
+    </div>
+
+    <p class="lede">Today's signals cluster around one theme: revenue certainty first, sanction second. APA took a final investment decision on a solar-plus-storage build for a single industrial customer on the strength of an energy supply agreement; BeGreen handed its Danish co-located battery to a seasoned optimiser before it earns a cent; and Australia's energy regulator described a wholesale market being visibly reshaped by batteries — the backdrop against which 500 MW-scale storage keeps entering the consenting queue.</p>
+
+    <section>
+      <p class="eyebrow">Storage / BESS</p>
+      <h2>One creditworthy offtaker is enough</h2>
+      <p>APA Group has taken FID to <a href="https://www.energy-storage.news/apa-to-build-104mwh-battery-storage-system-for-evolution-minings-ernest-henry-operations-in-australia/">build, own and operate the 104 MWh Sybella Creek solar-plus-storage site</a> serving Evolution Mining's Ernest Henry operations in Queensland, underpinned by an energy supply agreement with the miner. It is the cleanest possible illustration of behind-the-fence bankability: a creditworthy industrial counterparty replaces merchant forecasts entirely, and mining decarbonisation keeps opening as a financing channel of its own.</p>
+      <p>Further down the pipeline, Windlab and Squadron Energy <a href="https://www.energy-storage.news/windlab-squadron-energy-submit-500mw-battery-storage-system-for-federal-assessment-in-queensland-australia/">referred a 500 MW BESS at the Bungaban renewables hub for federal environmental assessment</a> — a marker of how much Queensland storage is queuing behind today's contracted deals.</p>
+    </section>
+
+    <section>
+      <p class="eyebrow">Storage / route to market</p>
+      <h2>Optimisation contracts as the second pillar</h2>
+      <p>In Denmark, developer-operator BeGreen has added a battery to one of its solar plants and <a href="https://www.energy-storage.news/denmark-begreen-enlists-danske-commodities-for-co-located-bess-optimisation/">contracted Danske Commodities to optimise it</a> — extending a trading relationship that already covers the PV asset. Co-located BESS revenue cases increasingly rest on two documents: the grid connection and the route-to-market agreement. Signing the optimiser before commissioning is becoming standard evidence in lender due diligence, not an afterthought.</p>
+    </section>
+
+    <section>
+      <p class="eyebrow">Hydrogen</p>
+      <h2>Offshore electrolysis meets its regulatory perimeter</h2>
+      <p>Industry alliance AquaVentus has pushed back publicly against German rules constraining offshore electrolysis, arguing the limits lack a coherent rationale (<a href="https://www.gasworld.com/h2-view/">via H2 View</a>). For North Sea hydrogen concepts, the dispute is a live reminder that the tangible criteria — what is permitted, where, under which regime — are still moving; until that perimeter settles, offshore-produced hydrogen remains difficult to underwrite regardless of its cost curve.</p>
+    </section>
+
+    <section>
+      <p class="eyebrow">Market design</p>
+      <h2>The regulator maps the battery era</h2>
+      <p>The Australian Energy Regulator's latest wholesale markets analysis finds that renewables and battery growth <a href="https://www.energy-storage.news/one-market-into-many-aer-says-battery-storage-systems-are-reshaping-australias-nem/">eased price pressure across the NEM in 2025 and is splitting the trading day into distinct intervals</a> — in effect turning one market into many. For storage investors this is the revenue map: intraday spreads, not average prices, are the business case, and regulator-published evidence of those spreads strengthens every Australian BESS financing model.</p>
+    </section>
+
+    <section>
+      <p class="eyebrow">New publications</p>
+      <h2>White papers &amp; research</h2>
+      <ul class="pubs">
+        <li>
+          <span class="pub-source">Market report · Australian Energy Regulator · 20 August 2026</span>
+          <a href="https://www.energy-storage.news/one-market-into-many-aer-says-battery-storage-systems-are-reshaping-australias-nem/">AER wholesale markets analysis: batteries reshaping the NEM</a>
+          <p>Regulator-grade evidence of the intraday spread economics that underpin Australian storage revenue models — citable in any lender case.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <p class="eyebrow">Watch list</p>
+      <h2>What we are tracking</h2>
+      <div class="watch">
+        <dl>
+          <dt>September 2026</dt>
+          <dd>Villeta (Paraguay) power tariff clarity expected — the gating item under Atome's FID financing.</dd>
+          <dt>October 2026</dt>
+          <dd>P2X Solutions begins contracted e-methane deliveries into Germany's RFNBO mandate demand.</dd>
+          <dt>~November 2026</dt>
+          <dd>Parau 2 (Romania) financial close due, roughly three months from signing.</dd>
+          <dt>2027</dt>
+          <dd>Federal assessment decision on the 500 MW Bungaban BESS referral — a bellwether for Queensland's storage consenting pace.</dd>
+        </dl>
+      </div>
+    </section>
+
+  </article>
+
+  <footer class="article-footer">
+    <div class="method">
+      <p><strong>About this briefing.</strong> Produced by an automated editorial pipeline — collection, curation, summarisation and a quality gate — screening news, white papers and research for bankability and pre-FID signals across hydrogen, battery storage, solar and wind. Sources are linked in place. Daily editions cover the previous 24 hours. Nothing here constitutes investment advice.</p>
+    </div>
+    <div class="colophon">
+      <span>© 2026 flink.energy</span>
+      <span>Edition #005</span>
+      <span>Contact: briefing@flink.energy</span>
+    </div>
+  </footer>
+</main>
+
+</body>
+</html>
